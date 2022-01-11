@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mobile privacy tools I use and why</title>
+  <meta name='description' content='A description of various privacy related mobile tools I use and why I've landed on them, what I like and alternatives I've tried.'>
+
+  <link rel="canonical" href="https://privacyjett.com/privacy/mobile-privacy-tools-i-use-and-why">
+  <link rel="alternate" type="application/rss+xml" title="Privacy Jett" href="/feed.xml">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mobile privacy tools I use and why – Privacy Jett">
+  <meta name="twitter:description" content="A description of various privacy related mobile tools I use and why I've landed on them, what I like and alternatives I've tried.">
+  <meta name="twitter:image:src" content="https://privacyjett.com/images/posts/pexels-torsten-dettlaff-54284.jpg">
+
+  <!-- Facebook OpenGraph -->
+  <meta property="og:title" content="Mobile privacy tools I use and why – Privacy Jett" />
+  <meta property="og:description" content="A description of various privacy related mobile tools I use and why I've landed on them, what I like and alternatives I've tried." />
+  <meta property="og:image" content="https://privacyjett.com/images/posts/pexels-torsten-dettlaff-54284.jpg" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,700;0,900;1,900&display=swap" rel="stylesheet">
+
+  <!-- Ionicons -->
+  <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
+
+  <script>
+    if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.setAttribute("dark", "");
+      document.documentElement.classList.add('dark-mode');
+    }
+  </script>
+
+  <style>
+  
+  /*!------------------------------------------------------------------
+[MAIN STYLESHEET]
+-------------------------------------------------------------------*/:root{--brand-color: #533feb;--white: #fff;--light-gray: #f0f0f0;--gray: #6a6d76;--dark: #0c101a;--dark-blue: #1e2740;--background-color: var(--white);--background-alt-color: var(--dark);--text-color: var(--dark-blue);--text-alt-color: var(--gray);--heading-font-color: var(--dark-blue);--link-color: var(--dark-blue);--link-color-hover: var(--brand-color);--button-color: var(--white);--button-background-color: var(--dark-blue);--button-background-hover: var(--brand-color);--border-color: var(--light-gray);--border-color-alt: #212630;--tr-color: var(--light-gray);--syntax-highlighting-background: #f3f3f3}[dark]:root{--brand-color: #533feb;--white: #fff;--light-gray: #f0f0f0;--dark: #0c101a;--background-color: var(--dark);--background-alt-color: #080b12;--text-color: #9a9eab;--text-alt-color: #848690;--heading-font-color: var(--light-gray);--link-color: var(--light-gray);--link-color-hover: var(--brand-color);--button-color: var(--white);--button-background-color: #080b12;--button-background-hover: var(--brand-color);--border-color: #252629;--border-color-alt: #212630;--tr-color: #080b12;--syntax-highlighting-background: #080b12}.list-reset{list-style-type:none;margin:0;padding:0}.clearfix::after,.clearfix ::before{content:"";display:table;clear:both}.screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px;word-wrap:normal !important}/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}h1{font-size:2em;margin:0.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace, monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace, monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,[type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:0.35em 0.75em 0.625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}body,h1,h2,h3,h4,h5,h6,p,blockquote,pre,dl,dd,ol,ul,fieldset,legend,figure,hr{margin:0;padding:0}li>ul,li>ol{margin-bottom:0}table{border-collapse:collapse;border-spacing:0}h1,h2,h3,h4,h5,h6,ul,ol,dl,blockquote,p,address,hr,table,fieldset,figure,pre{margin-bottom:32px}ul,ol,dd{margin-left:20px}ul li,ol li{margin-bottom:10px}.highlight{background:var(--syntax-highlighting-background)}.highlighter-rouge .highlight{background:#eef}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#5d76bf;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#ec2355}.highlight .na{color:#008080}.highlight .nb{color:#0086B3}.highlight .nc{color:#5d76bf;font-weight:bold}.highlight .no{color:#008080}.highlight .ni{color:#800080}.highlight .ne{color:#900;font-weight:bold}.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:#4d65dc}.highlight .nv{color:#008080}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#ec2355}.highlight .sc{color:#ec2355}.highlight .sd{color:#ec2355}.highlight .s2{color:#ec2355}.highlight .se{color:#ec2355}.highlight .sh{color:#ec2355}.highlight .si{color:#ec2355}.highlight .sx{color:#ec2355}.highlight .sr{color:#009926}.highlight .s1{color:#ec2355}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:#008080}.highlight .vg{color:#008080}.highlight .vi{color:#008080}.highlight .il{color:#099}.container{max-width:1080px;padding-left:20px;padding-right:20px;margin:0 auto}@media only screen and (max-width: 1140px){.container{max-width:1000px}}@media only screen and (max-width: 1024px){.container{max-width:740px}}@media only screen and (max-width: 768px){.container{max-width:560px}}@media only screen and (max-width: 576px){.container{max-width:480px}}.row{display:flex;flex-wrap:wrap;flex:0 1 auto;flex-direction:row;box-sizing:border-box;margin-left:-20px;margin-right:-20px}.col{padding-left:20px;padding-right:20px}[class^="col-"]{flex:auto}.col-0{width:0%}.col-1{width:8.3333333333%}.col-2{width:16.6666666667%}.col-3{width:25%}.col-4{width:33.3333333333%}.col-5{width:41.6666666667%}.col-6{width:50%}.col-7{width:58.3333333333%}.col-8{width:66.6666666667%}.col-9{width:75%}.col-10{width:83.3333333333%}.col-11{width:91.6666666667%}.col-12{width:100%}.push-0{margin-left:0%}.push-1{margin-left:8.3333333333%}.push-2{margin-left:16.6666666667%}.push-3{margin-left:25%}.push-4{margin-left:33.3333333333%}.push-5{margin-left:41.6666666667%}.push-6{margin-left:50%}.push-7{margin-left:58.3333333333%}.push-8{margin-left:66.6666666667%}.push-9{margin-left:75%}.push-10{margin-left:83.3333333333%}.push-11{margin-left:91.6666666667%}.push-12{margin-left:100%}.pull-0{margin-right:0%}.pull-1{margin-right:8.3333333333%}.pull-2{margin-right:16.6666666667%}.pull-3{margin-right:25%}.pull-4{margin-right:33.3333333333%}.pull-5{margin-right:41.6666666667%}.pull-6{margin-right:50%}.pull-7{margin-right:58.3333333333%}.pull-8{margin-right:66.6666666667%}.pull-9{margin-right:75%}.pull-10{margin-right:83.3333333333%}.pull-11{margin-right:91.6666666667%}.pull-12{margin-right:100%}@media (max-width: 1024px){.col-d-0{width:0%}.col-d-1{width:8.3333333333%}.col-d-2{width:16.6666666667%}.col-d-3{width:25%}.col-d-4{width:33.3333333333%}.col-d-5{width:41.6666666667%}.col-d-6{width:50%}.col-d-7{width:58.3333333333%}.col-d-8{width:66.6666666667%}.col-d-9{width:75%}.col-d-10{width:83.3333333333%}.col-d-11{width:91.6666666667%}.col-d-12{width:100%}.push-d-0{margin-left:0%}.push-d-1{margin-left:8.3333333333%}.push-d-2{margin-left:16.6666666667%}.push-d-3{margin-left:25%}.push-d-4{margin-left:33.3333333333%}.push-d-5{margin-left:41.6666666667%}.push-d-6{margin-left:50%}.push-d-7{margin-left:58.3333333333%}.push-d-8{margin-left:66.6666666667%}.push-d-9{margin-left:75%}.push-d-10{margin-left:83.3333333333%}.push-d-11{margin-left:91.6666666667%}.push-d-12{margin-left:100%}.pull-d-0{margin-right:0%}.pull-d-1{margin-right:8.3333333333%}.pull-d-2{margin-right:16.6666666667%}.pull-d-3{margin-right:25%}.pull-d-4{margin-right:33.3333333333%}.pull-d-5{margin-right:41.6666666667%}.pull-d-6{margin-right:50%}.pull-d-7{margin-right:58.3333333333%}.pull-d-8{margin-right:66.6666666667%}.pull-d-9{margin-right:75%}.pull-d-10{margin-right:83.3333333333%}.pull-d-11{margin-right:91.6666666667%}.pull-d-12{margin-right:100%}}@media (max-width: 768px){.col-t-0{width:0%}.col-t-1{width:8.3333333333%}.col-t-2{width:16.6666666667%}.col-t-3{width:25%}.col-t-4{width:33.3333333333%}.col-t-5{width:41.6666666667%}.col-t-6{width:50%}.col-t-7{width:58.3333333333%}.col-t-8{width:66.6666666667%}.col-t-9{width:75%}.col-t-10{width:83.3333333333%}.col-t-11{width:91.6666666667%}.col-t-12{width:100%}.push-t-0{margin-left:0%}.push-t-1{margin-left:8.3333333333%}.push-t-2{margin-left:16.6666666667%}.push-t-3{margin-left:25%}.push-t-4{margin-left:33.3333333333%}.push-t-5{margin-left:41.6666666667%}.push-t-6{margin-left:50%}.push-t-7{margin-left:58.3333333333%}.push-t-8{margin-left:66.6666666667%}.push-t-9{margin-left:75%}.push-t-10{margin-left:83.3333333333%}.push-t-11{margin-left:91.6666666667%}.push-t-12{margin-left:100%}.pull-t-0{margin-right:0%}.pull-t-1{margin-right:8.3333333333%}.pull-t-2{margin-right:16.6666666667%}.pull-t-3{margin-right:25%}.pull-t-4{margin-right:33.3333333333%}.pull-t-5{margin-right:41.6666666667%}.pull-t-6{margin-right:50%}.pull-t-7{margin-right:58.3333333333%}.pull-t-8{margin-right:66.6666666667%}.pull-t-9{margin-right:75%}.pull-t-10{margin-right:83.3333333333%}.pull-t-11{margin-right:91.6666666667%}.pull-t-12{margin-right:100%}}@media (max-width: 576px){.col-m-0{width:0%}.col-m-1{width:8.3333333333%}.col-m-2{width:16.6666666667%}.col-m-3{width:25%}.col-m-4{width:33.3333333333%}.col-m-5{width:41.6666666667%}.col-m-6{width:50%}.col-m-7{width:58.3333333333%}.col-m-8{width:66.6666666667%}.col-m-9{width:75%}.col-m-10{width:83.3333333333%}.col-m-11{width:91.6666666667%}.col-m-12{width:100%}.push-m-0{margin-left:0%}.push-m-1{margin-left:8.3333333333%}.push-m-2{margin-left:16.6666666667%}.push-m-3{margin-left:25%}.push-m-4{margin-left:33.3333333333%}.push-m-5{margin-left:41.6666666667%}.push-m-6{margin-left:50%}.push-m-7{margin-left:58.3333333333%}.push-m-8{margin-left:66.6666666667%}.push-m-9{margin-left:75%}.push-m-10{margin-left:83.3333333333%}.push-m-11{margin-left:91.6666666667%}.push-m-12{margin-left:100%}.pull-m-0{margin-right:0%}.pull-m-1{margin-right:8.3333333333%}.pull-m-2{margin-right:16.6666666667%}.pull-m-3{margin-right:25%}.pull-m-4{margin-right:33.3333333333%}.pull-m-5{margin-right:41.6666666667%}.pull-m-6{margin-right:50%}.pull-m-7{margin-right:58.3333333333%}.pull-m-8{margin-right:66.6666666667%}.pull-m-9{margin-right:75%}.pull-m-10{margin-right:83.3333333333%}.pull-m-11{margin-right:91.6666666667%}.pull-m-12{margin-right:100%}}@media (max-width: 1024px){.col-d-0{width:0%}.col-d-1{width:8.3333333333%}.col-d-2{width:16.6666666667%}.col-d-3{width:25%}.col-d-4{width:33.3333333333%}.col-d-5{width:41.6666666667%}.col-d-6{width:50%}.col-d-7{width:58.3333333333%}.col-d-8{width:66.6666666667%}.col-d-9{width:75%}.col-d-10{width:83.3333333333%}.col-d-11{width:91.6666666667%}.col-d-12{width:100%}.push-d-0{margin-left:0%}.push-d-1{margin-left:8.3333333333%}.push-d-2{margin-left:16.6666666667%}.push-d-3{margin-left:25%}.push-d-4{margin-left:33.3333333333%}.push-d-5{margin-left:41.6666666667%}.push-d-6{margin-left:50%}.push-d-7{margin-left:58.3333333333%}.push-d-8{margin-left:66.6666666667%}.push-d-9{margin-left:75%}.push-d-10{margin-left:83.3333333333%}.push-d-11{margin-left:91.6666666667%}.push-d-12{margin-left:100%}.pull-d-0{margin-right:0%}.pull-d-1{margin-right:8.3333333333%}.pull-d-2{margin-right:16.6666666667%}.pull-d-3{margin-right:25%}.pull-d-4{margin-right:33.3333333333%}.pull-d-5{margin-right:41.6666666667%}.pull-d-6{margin-right:50%}.pull-d-7{margin-right:58.3333333333%}.pull-d-8{margin-right:66.6666666667%}.pull-d-9{margin-right:75%}.pull-d-10{margin-right:83.3333333333%}.pull-d-11{margin-right:91.6666666667%}.pull-d-12{margin-right:100%}}@media (max-width: 768px){.col-t-0{width:0%}.col-t-1{width:8.3333333333%}.col-t-2{width:16.6666666667%}.col-t-3{width:25%}.col-t-4{width:33.3333333333%}.col-t-5{width:41.6666666667%}.col-t-6{width:50%}.col-t-7{width:58.3333333333%}.col-t-8{width:66.6666666667%}.col-t-9{width:75%}.col-t-10{width:83.3333333333%}.col-t-11{width:91.6666666667%}.col-t-12{width:100%}.push-t-0{margin-left:0%}.push-t-1{margin-left:8.3333333333%}.push-t-2{margin-left:16.6666666667%}.push-t-3{margin-left:25%}.push-t-4{margin-left:33.3333333333%}.push-t-5{margin-left:41.6666666667%}.push-t-6{margin-left:50%}.push-t-7{margin-left:58.3333333333%}.push-t-8{margin-left:66.6666666667%}.push-t-9{margin-left:75%}.push-t-10{margin-left:83.3333333333%}.push-t-11{margin-left:91.6666666667%}.push-t-12{margin-left:100%}.pull-t-0{margin-right:0%}.pull-t-1{margin-right:8.3333333333%}.pull-t-2{margin-right:16.6666666667%}.pull-t-3{margin-right:25%}.pull-t-4{margin-right:33.3333333333%}.pull-t-5{margin-right:41.6666666667%}.pull-t-6{margin-right:50%}.pull-t-7{margin-right:58.3333333333%}.pull-t-8{margin-right:66.6666666667%}.pull-t-9{margin-right:75%}.pull-t-10{margin-right:83.3333333333%}.pull-t-11{margin-right:91.6666666667%}.pull-t-12{margin-right:100%}}@media (max-width: 576px){.col-m-0{width:0%}.col-m-1{width:8.3333333333%}.col-m-2{width:16.6666666667%}.col-m-3{width:25%}.col-m-4{width:33.3333333333%}.col-m-5{width:41.6666666667%}.col-m-6{width:50%}.col-m-7{width:58.3333333333%}.col-m-8{width:66.6666666667%}.col-m-9{width:75%}.col-m-10{width:83.3333333333%}.col-m-11{width:91.6666666667%}.col-m-12{width:100%}.push-m-0{margin-left:0%}.push-m-1{margin-left:8.3333333333%}.push-m-2{margin-left:16.6666666667%}.push-m-3{margin-left:25%}.push-m-4{margin-left:33.3333333333%}.push-m-5{margin-left:41.6666666667%}.push-m-6{margin-left:50%}.push-m-7{margin-left:58.3333333333%}.push-m-8{margin-left:66.6666666667%}.push-m-9{margin-left:75%}.push-m-10{margin-left:83.3333333333%}.push-m-11{margin-left:91.6666666667%}.push-m-12{margin-left:100%}.pull-m-0{margin-right:0%}.pull-m-1{margin-right:8.3333333333%}.pull-m-2{margin-right:16.6666666667%}.pull-m-3{margin-right:25%}.pull-m-4{margin-right:33.3333333333%}.pull-m-5{margin-right:41.6666666667%}.pull-m-6{margin-right:50%}.pull-m-7{margin-right:58.3333333333%}.pull-m-8{margin-right:66.6666666667%}.pull-m-9{margin-right:75%}.pull-m-10{margin-right:83.3333333333%}.pull-m-11{margin-right:91.6666666667%}.pull-m-12{margin-right:100%}}@media (max-width: 1024px){.col-d-0{width:0%}.col-d-1{width:8.3333333333%}.col-d-2{width:16.6666666667%}.col-d-3{width:25%}.col-d-4{width:33.3333333333%}.col-d-5{width:41.6666666667%}.col-d-6{width:50%}.col-d-7{width:58.3333333333%}.col-d-8{width:66.6666666667%}.col-d-9{width:75%}.col-d-10{width:83.3333333333%}.col-d-11{width:91.6666666667%}.col-d-12{width:100%}.push-d-0{margin-left:0%}.push-d-1{margin-left:8.3333333333%}.push-d-2{margin-left:16.6666666667%}.push-d-3{margin-left:25%}.push-d-4{margin-left:33.3333333333%}.push-d-5{margin-left:41.6666666667%}.push-d-6{margin-left:50%}.push-d-7{margin-left:58.3333333333%}.push-d-8{margin-left:66.6666666667%}.push-d-9{margin-left:75%}.push-d-10{margin-left:83.3333333333%}.push-d-11{margin-left:91.6666666667%}.push-d-12{margin-left:100%}.pull-d-0{margin-right:0%}.pull-d-1{margin-right:8.3333333333%}.pull-d-2{margin-right:16.6666666667%}.pull-d-3{margin-right:25%}.pull-d-4{margin-right:33.3333333333%}.pull-d-5{margin-right:41.6666666667%}.pull-d-6{margin-right:50%}.pull-d-7{margin-right:58.3333333333%}.pull-d-8{margin-right:66.6666666667%}.pull-d-9{margin-right:75%}.pull-d-10{margin-right:83.3333333333%}.pull-d-11{margin-right:91.6666666667%}.pull-d-12{margin-right:100%}}@media (max-width: 768px){.col-t-0{width:0%}.col-t-1{width:8.3333333333%}.col-t-2{width:16.6666666667%}.col-t-3{width:25%}.col-t-4{width:33.3333333333%}.col-t-5{width:41.6666666667%}.col-t-6{width:50%}.col-t-7{width:58.3333333333%}.col-t-8{width:66.6666666667%}.col-t-9{width:75%}.col-t-10{width:83.3333333333%}.col-t-11{width:91.6666666667%}.col-t-12{width:100%}.push-t-0{margin-left:0%}.push-t-1{margin-left:8.3333333333%}.push-t-2{margin-left:16.6666666667%}.push-t-3{margin-left:25%}.push-t-4{margin-left:33.3333333333%}.push-t-5{margin-left:41.6666666667%}.push-t-6{margin-left:50%}.push-t-7{margin-left:58.3333333333%}.push-t-8{margin-left:66.6666666667%}.push-t-9{margin-left:75%}.push-t-10{margin-left:83.3333333333%}.push-t-11{margin-left:91.6666666667%}.push-t-12{margin-left:100%}.pull-t-0{margin-right:0%}.pull-t-1{margin-right:8.3333333333%}.pull-t-2{margin-right:16.6666666667%}.pull-t-3{margin-right:25%}.pull-t-4{margin-right:33.3333333333%}.pull-t-5{margin-right:41.6666666667%}.pull-t-6{margin-right:50%}.pull-t-7{margin-right:58.3333333333%}.pull-t-8{margin-right:66.6666666667%}.pull-t-9{margin-right:75%}.pull-t-10{margin-right:83.3333333333%}.pull-t-11{margin-right:91.6666666667%}.pull-t-12{margin-right:100%}}@media (max-width: 576px){.col-m-0{width:0%}.col-m-1{width:8.3333333333%}.col-m-2{width:16.6666666667%}.col-m-3{width:25%}.col-m-4{width:33.3333333333%}.col-m-5{width:41.6666666667%}.col-m-6{width:50%}.col-m-7{width:58.3333333333%}.col-m-8{width:66.6666666667%}.col-m-9{width:75%}.col-m-10{width:83.3333333333%}.col-m-11{width:91.6666666667%}.col-m-12{width:100%}.push-m-0{margin-left:0%}.push-m-1{margin-left:8.3333333333%}.push-m-2{margin-left:16.6666666667%}.push-m-3{margin-left:25%}.push-m-4{margin-left:33.3333333333%}.push-m-5{margin-left:41.6666666667%}.push-m-6{margin-left:50%}.push-m-7{margin-left:58.3333333333%}.push-m-8{margin-left:66.6666666667%}.push-m-9{margin-left:75%}.push-m-10{margin-left:83.3333333333%}.push-m-11{margin-left:91.6666666667%}.push-m-12{margin-left:100%}.pull-m-0{margin-right:0%}.pull-m-1{margin-right:8.3333333333%}.pull-m-2{margin-right:16.6666666667%}.pull-m-3{margin-right:25%}.pull-m-4{margin-right:33.3333333333%}.pull-m-5{margin-right:41.6666666667%}.pull-m-6{margin-right:50%}.pull-m-7{margin-right:58.3333333333%}.pull-m-8{margin-right:66.6666666667%}.pull-m-9{margin-right:75%}.pull-m-10{margin-right:83.3333333333%}.pull-m-11{margin-right:91.6666666667%}.pull-m-12{margin-right:100%}}img[data-action="zoom"]{cursor:pointer;cursor:-webkit-zoom-in;cursor:-moz-zoom-in}.zoom-img,.zoom-img-wrap{position:relative;z-index:666;-webkit-transition:all 300ms;-o-transition:all 300ms;transition:all 300ms}img.zoom-img{cursor:pointer;cursor:-webkit-zoom-out;cursor:-moz-zoom-out}.zoom-overlay{z-index:420;background:var(--background-color);position:fixed;top:0;left:0;right:0;bottom:0;pointer-events:none;opacity:0;-webkit-transition:opacity 300ms;-o-transition:opacity 300ms;transition:opacity 300ms}.zoom-overlay-open .zoom-overlay{opacity:1}.zoom-overlay-open,.zoom-overlay-transitioning{cursor:default}.animate{animation:animateElement cubic-bezier(0.3, 0.45, 0.45, 0.95) 0.75s;animation-duration:0.5s;animation-iteration-count:1;transition:transform .15s}@keyframes animateElement{0%{transform:translate(0px, 50px)}100%{transform:translate(0px, 0px)}}*,*::after,*::before{box-sizing:border-box}body{font-family:"Work Sans",Helvetica Neue,Helvetica,Arial,sans-serif;font-size:20px;line-height:1.5;color:var(--text-color);background-color:var(--background-color);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;transition:all .25s}@media only screen and (max-width: 1024px){body{font-size:18px}}@media only screen and (max-width: 576px){body{font-size:16px}}*::selection{color:var(--white);background-color:var(--brand-color)}h1,h2,h3,h4,h5,h6{font-family:"Work Sans",Helvetica Neue,Helvetica,Arial,sans-serif;font-weight:900;line-height:1.3;color:var(--heading-font-color)}h1{font-size:36px}h2{font-size:28px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}blockquote{position:relative;padding:68px 0;margin:68px -130px;font-size:44px;line-height:1;font-weight:900;font-style:italic;text-align:center;color:var(--heading-font-color)}blockquote::after,blockquote::before{content:"";position:absolute;display:block;width:100%;height:1px;border-top:1px dashed var(--text-color)}blockquote::after{top:0}blockquote::before{bottom:0}blockquote p{margin-bottom:10px}blockquote cite{display:inline-block;margin-top:8px;font-size:14px;font-weight:900;font-style:italic;color:var(--heading-font-color)}blockquote cite::after,blockquote cite::before{content:" – "}@media only screen and (max-width: 1140px){blockquote{margin:68px -90px;font-size:40px}}@media only screen and (max-width: 1024px){blockquote{padding:48px 0;margin:48px 0;font-size:28px}}@media only screen and (max-width: 576px){blockquote{padding:40px 0;margin:40px 0;font-size:21px}}pre{overflow:auto;padding:15px;margin-bottom:0;font-size:14px;white-space:pre-wrap;word-wrap:break-word;word-break:break-all;color:var(--heading-font-color)}img,.zoom-img-wrap{max-width:100%;height:auto;vertical-align:middle}img+em,.zoom-img-wrap+em,.gallery+em{display:block;margin-top:20px;font-size:14px;line-height:22px;font-style:normal;font-weight:normal;text-align:center;color:var(--heading-font-color)}img+em a,.zoom-img-wrap+em a,.gallery+em a{font-weight:700;border-bottom:3px solid var(--border-color);transition:all 0.35s}img+em a:hover,.zoom-img-wrap+em a:hover,.gallery+em a:hover{color:var(--link-color-hover);border-color:transparent}@media only screen and (max-width: 576px){img+em,.zoom-img-wrap+em,.gallery+em{margin-top:12px}}a{text-decoration:none;color:var(--link-color);transition:all 0.35s}a:hover{color:var(--link-color) -hover}hr{position:relative;height:1px;margin:60px 0;border:0}hr::before{content:". . .";position:absolute;top:-5px;line-height:0;color:var(--heading-font-color)}.table-container{display:block;max-width:100%;overflow-x:auto}table{font-size:12px;color:var(--dark);width:100%;border-width:1px;border-color:var(--background-alt-color);border-collapse:collapse;color:var(--heading-font-color)}table th{padding:10px;font-size:16px;text-align:left;border:1px solid var(--background-alt-color);color:var(--white);font-weight:700;background-color:var(--background-alt-color)}table tr{background-color:var(--tr-color);transition:all .3s ease}table tr:nth-child(even){background-color:transparent}table td{padding:10px;font-size:14px;border:1px solid var(--background-alt-color)}.button{display:inline-block;padding:20px 40px;font-size:14px;font-weight:700;text-decoration:none;border-radius:4px;border:none;color:var(--white);background-color:var(--button-background-color);outline:none;cursor:pointer;transition:all .25s}.button:hover{background:var(--button-background-hover)}.button:active{transform:translateY(2px)}.top{position:fixed;bottom:36px;right:-100px;z-index:1;width:36px;height:36px;font-size:28px;line-height:39px;text-align:center;border-radius:14px;background-color:var(--background-alt-color);color:var(--light-gray);cursor:pointer;transition:all .25s ease;box-shadow:0px 0px 20px rgba(0,0,0,0.05)}.top:hover{color:var(--white);background-color:var(--brand-color)}.top.is-active{right:36px}@media only screen and (max-width: 1024px){.top{bottom:24px}.top.is-active{right:28px}}.header{background:var(--background-color)}.header__inner{position:relative;display:flex;align-items:center;flex-wrap:wrap;padding:60px 20px}@media only screen and (max-width: 768px){.header__inner{padding:40px 20px}}.logo__link{padding:4px 0;font-size:15px;line-height:1;font-weight:900;text-transform:uppercase}.logo__link:hover{color:var(--brand-color)}.logo__image{max-height:50px}.main-nav{margin-left:auto}@media only screen and (max-width: 1024px){.main-nav{position:fixed;top:0;left:0;right:0;bottom:0;z-index:100;opacity:0;visibility:hidden;background-color:var(--background-color)}.main-nav.is-open{opacity:1;visibility:visible;transition:all .25s ease}.main-nav .nav__list{width:100%}.main-nav .nav__list .nav__item{display:block;margin:0}.main-nav .nav__list .nav__item:last-child{margin-right:0}.main-nav .nav__list .nav__item .nav__link{display:inline-block;padding:20px 0;font-size:15px}}.main-nav__box{display:flex;align-items:center}.main-nav__box .nav__icon-close{display:none;font-size:24px;text-align:right}.main-nav__box .nav__icon-close .ion-md-close{transition:all 0.35s;cursor:pointer}.main-nav__box .nav__icon-close .ion-md-close:hover{color:var(--brand-color)}.main-nav__box .nav__title{display:none}@media only screen and (max-width: 1024px){.main-nav__box{display:block;align-items:center;width:80%;height:80vh;padding-top:180px;margin:0 auto;text-align:center;overflow-y:auto}.main-nav__box .nav__icon-close{display:block;position:absolute;top:40px;right:40px;font-size:32px;line-height:1}.main-nav__box .nav__title{display:inline-block;padding:16px 32px;margin-bottom:32px;font-size:24px;font-weight:900;border-radius:4px;color:var(--heading-font-color);border:2px solid var(--heading-font-color);box-shadow:8px 8px 0 var(--heading-font-color)}}@media only screen and (max-width: 768px){.main-nav__box{padding-top:100px}}.nav__list .nav__item{display:inline-block;margin-right:36px;margin-bottom:0}.nav__list .nav__item:last-child{margin-right:44px}.nav__list .nav__item .nav__link{padding:4px;font-size:13px;line-height:15px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase}.nav__list .nav__item .nav__link:hover{color:var(--brand-color)}.nav-buttons{display:flex;align-items:center;font-size:21px;color:var(--link-color);cursor:pointer}.nav-buttons .nav__icon{transition:all 0.35s}.nav-buttons .nav__icon:hover{color:var(--brand-color)}.nav-buttons .nav__icon:first-child{margin-right:15px}.nav-buttons .nav__icon-menu{display:none}@media only screen and (max-width: 1024px){.nav-buttons{margin-left:auto;font-size:24px}.nav-buttons .nav__icon-menu{display:block}}.search{position:fixed;top:0;left:0;right:0;bottom:0;z-index:-1;overflow:auto;opacity:0;background:var(--background-color);transition:all .25s ease}.search.is-visible{z-index:100;opacity:1;transition:all .25s ease}.search__box{margin:0 auto;padding-top:140px}@media only screen and (max-width: 1024px){.search__box{padding-top:100px}}.search__group{position:relative;margin-bottom:60px}.search__group .search__close{position:absolute;right:25px;top:50%;transform:translateY(-50%);font-size:28px;line-height:1;color:var(--heading-font-color);cursor:pointer;transition:all .25s}.search__group .search__close i{vertical-align:middle}.search__group .search__close:hover{color:var(--brand-color)}.search__group .search__text{width:100%;padding:24px;font-size:24px;font-weight:700;line-height:28px;border:2px solid var(--heading-font-color);border-radius:4px;color:var(--heading-font-color);background-color:var(--background-color);box-shadow:8px 8px 0 var(--heading-font-color);outline:none;transition:all .25s}.search__group .search__text::placeholder{font-weight:700;color:var(--heading-font-color)}.search__group .search__text::-ms-clear{display:none}@media only screen and (max-width: 576px){.search__group .search__text{padding:20px;font-size:20px}}.search-results-list{height:64vh;overflow:auto}.search-results-list .no-results{width:100%;font-size:32px;text-align:center;color:var(--heading-font-color)}.pagination__inner{display:flex;justify-content:center;align-items:center;padding:40px 0;border-top:1px solid var(--border-color);border-bottom:1px solid var(--border-color)}@media only screen and (max-width: 576px){.pagination__inner{padding:32px 0}}.pagination__list{display:flex;justify-content:space-between;align-items:center;width:100%;font-size:14px;font-weight:700;line-height:1;text-transform:uppercase;color:var(--text-color)}.pagination__count{display:inline-block;padding:0 15px;margin:0 15px;font-size:13px;color:var(--text-alt-color)}.pagination__next i,.pagination__prev i{font-size:13px}.pagination__next:hover,.pagination__prev:hover{color:var(--brand-color)}.pagination__next.disabled,.pagination__prev.disabled{opacity:0.4;cursor:not-allowed;color:inherit}.pagination__next i{margin-left:4px}.pagination__prev i{margin-right:4px}.footer{margin-top:96px;background:var(--background-alt-color)}.footer .row .col{flex-grow:1}.footer .footer__inner{position:relative;padding:68px 0}.footer .footer__inner .col{position:relative;padding:0 40px}.footer .footer__inner .col::after{content:"";position:absolute;top:50%;left:0;transform:translateY(-50%);display:block;width:1px;height:100px;background-color:var(--border-color-alt)}.footer .footer__inner .col:first-child{padding:0 40px 0 20px}.footer .footer__inner .col:first-child::after{content:none}@media only screen and (max-width: 1024px){.footer .footer__inner .col:nth-child(2){padding:0 20px 0 40px}}@media only screen and (max-width: 768px){.footer .footer__inner .col:nth-child(2){padding:0 20px}}.footer .footer__inner .col:last-child{padding:0 20px 0 40px}@media only screen and (max-width: 1024px){.footer .footer__inner .col:last-child{padding:0 20px}.footer .footer__inner .col:last-child::after{content:none}}@media only screen and (max-width: 768px){.footer .footer__inner .col{padding:0 20px}.footer .footer__inner .col::after{content:none}}@media only screen and (max-width: 1024px){.footer .row .col:last-child>.widget{margin-bottom:0}}@media only screen and (max-width: 768px){.footer{margin-top:60px}}@media only screen and (max-width: 1024px){.widget{margin-bottom:40px}}.widget__head{margin-bottom:32px}.widget__head .widget__title{margin:0;font-size:20px;text-transform:uppercase;color:var(--light-gray)}.widget-info .footer-logo .footer-logo__link{font-size:20px;font-weight:900;line-height:1.3;text-transform:uppercase;color:var(--light-gray)}.widget-info .footer-text{margin:0;font-size:14px;color:var(--text-alt-color)}.widget-info .social{margin-top:40px}.widget-info .social .social__list{display:flex;align-items:center;flex-wrap:wrap}.widget-info .social .social__item{margin-right:8px;margin-bottom:8px}.widget-info .social .social__link{display:flex;justify-content:center;align-items:center;width:40px;height:40px;font-size:16px;color:var(--light-gray);border:1px solid var(--border-color-alt);border-radius:14px;transition:all .25s}.widget-info .social .social__link:hover{transform:translate3d(3px, -3px, 0);box-shadow:-3px 3px 0 var(--light-gray)}.widget-subscribe .subscribe__inner{display:flex;flex-direction:column;justify-content:space-between}.widget-subscribe .subscribe__group{margin-bottom:32px}.widget-subscribe .subscribe__group .subscribe__title{margin-bottom:15px;color:var(--light-gray)}.widget-subscribe .subscribe__group .subscribe__description{font-size:14px;color:var(--text-alt-color)}.widget-subscribe .subscribe-form{position:relative;height:60px}.widget-subscribe .subscribe-form .subscribe-email{width:100%;height:100%;padding:16px;font-size:14px;line-height:19px;font-weight:700;color:var(--light-gray);border:2px solid var(--border-color-alt);border-radius:4px;background:transparent;transition:.25s ease-in-out;outline:0}.widget-subscribe .subscribe-form .subscribe-email::placeholder{color:var(--text-alt-color);font-weight:500}.widget-subscribe .subscribe-form .subscribe-email:focus{color:var(--light-gray);border-color:var(--brand-color)}.widget-subscribe .subscribe-form .subscribe-button{position:absolute;top:8px;right:8px;display:inline-block;height:44px;padding:0 28px;font-size:14px;font-weight:700;border:none;border-radius:4px;outline:none;color:var(--dark);background:var(--light-gray);transition:all 0.3s;cursor:pointer}.widget-subscribe .subscribe-form .subscribe-button:hover{color:var(--white);background:var(--button-background-hover)}@media only screen and (max-width: 1130px){.widget-subscribe .subscribe-form .subscribe-email{font-size:13px}.widget-subscribe .subscribe-form .subscribe-button{font-size:14px}}.tag__cloud{display:flex;align-items:center;flex-wrap:wrap}.tag__cloud a{padding:8px 16px;margin-right:4px;margin-bottom:4px;font-size:11px;line-height:1;font-weight:500;text-transform:uppercase;border:2px solid var(--border-color-alt);border-radius:30px;color:var(--text-alt-color)}.tag__cloud a:hover{color:var(--light-gray);border-color:var(--brand-color)}.tag__cloud a:last-child{margin-right:0}.footer__info{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:44px 0;border-top:1px solid var(--border-color-alt)}@media only screen and (max-width: 576px){.footer__info{flex-direction:column;align-items:flex-start}}.copyright{font-size:11px;font-weight:500;text-transform:uppercase;color:var(--text-alt-color)}.copyright a{color:var(--light-gray);font-weight:700}.copyright a:hover{color:var(--brand-color)}.toggle-theme{position:relative;display:flex;width:45px;height:24px;border-radius:30px;background-color:var(--border-color-alt);user-select:none;cursor:pointer}@media only screen and (max-width: 576px){.toggle-theme{margin-top:12px}}.toggle-sun,.toggle-moon{display:flex;justify-content:center;align-items:center;width:50%;font-size:16px;color:var(--light-gray)}.toggle-moon{transform:translateX(1px)}.toggle-thumb{position:absolute;top:2px;left:2px;width:20px;height:20px;background-color:var(--light-gray);border-radius:50%;transition:transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)}.dark-mode .toggle-thumb{transform:translateX(21px)}.gallery-box{margin:40px 0}.gallery{display:grid;grid-template-columns:repeat(3, auto);justify-content:center;align-content:center;grid-gap:10px}.gallery .gallery__image{background:var(--background-color)}.gallery .gallery__image img{display:block;width:100%;height:auto;object-fit:cover}.hero{margin-bottom:96px}@media only screen and (max-width: 768px){.hero{margin-bottom:60px}}@media only screen and (max-width: 576px){.hero{margin-bottom:48px}}.hero__inner{display:flex;align-items:center}@media only screen and (max-width: 1024px){.hero__inner{flex-direction:column}}.hero__left{position:relative;margin-right:68px}.hero__left .hero__image{position:relative;z-index:10;width:380px;height:480px;margin:0 auto;border-radius:2px;overflow:hidden;user-select:none;background:var(--text-color);box-shadow:10px 10px 0 var(--heading-font-color)}.hero__left .hero__image img{position:absolute;top:0;z-index:1;height:100%;width:100%;object-fit:cover;border-radius:2px}@media only screen and (max-width: 1140px){.hero__left{margin-right:60px}}@media only screen and (max-width: 1024px){.hero__left{width:100%;margin-right:0;order:-1}.hero__left .hero__image{width:100%;height:440px;margin-bottom:48px}}@media only screen and (max-width: 768px){.hero__left .hero__image{height:360px;margin-bottom:40px}}@media only screen and (max-width: 576px){.hero__left .hero__image{height:280px;margin-bottom:32px;box-shadow:none}}.hero__right .hero__title{margin-bottom:32px;font-size:68px;line-height:.85em;font-weight:900;letter-spacing:-1px;text-transform:uppercase;color:var(--heading-font-color)}@media only screen and (max-width: 1140px){.hero__right .hero__title{font-size:60px}}@media only screen and (max-width: 1024px){.hero__right .hero__title{margin-bottom:32px;font-size:48px;letter-spacing:normal}}@media only screen and (max-width: 576px){.hero__right .hero__title{margin-bottom:24px;font-size:32px}}.hero__right .hero__description{max-width:530px;margin-bottom:32px;font-size:20px;color:var(--text-color)}@media only screen and (max-width: 1024px){.hero__right .hero__description{max-width:100%;margin-bottom:24px;font-size:inherit}}.hero__right .hero__contact .social__list{display:flex;align-items:center;flex-wrap:wrap}.hero__right .hero__contact .social__item{margin-right:8px;margin-bottom:0}.hero__right .hero__contact .social__item:last-child{margin-right:0}.hero__right .hero__contact .social__link{display:flex;justify-content:center;align-items:center;width:43px;height:43px;text-align:center;font-size:20px;border-radius:14px;border:1px solid var(--border-color);color:var(--heading-font-color);background:var(--background-color);transition:all .25s}.hero__right .hero__contact .social__link i{line-height:49px}.hero__right .hero__contact .social__link:hover{transform:translate3d(3px, -3px, 0);box-shadow:-3px 3px 0 var(--heading-font-color)}@media only screen and (max-width: 1024px){.hero__right .hero__contact .social__link{width:40px;height:40px;font-size:18px}}.contact-head{margin-bottom:32px}.form__group{margin-bottom:20px}.form__group:last-child{margin-bottom:0}.form__input{width:100%;padding:20px;font-size:14px;font-weight:500;border:1.5px solid var(--border-color);border-radius:2px;outline:none;transition:.25s ease-in-out;resize:vertical;color:var(--heading-font-color);background-color:var(--background-color)}.form__input::placeholder{color:var(--text-color)}.form__input:focus{border-color:var(--heading-font-color)}.article{margin-bottom:60px}@media only screen and (max-width: 576px){.article{margin-bottom:48px}}.article__title{margin-bottom:32px;font-size:48px;line-height:.85em;text-transform:uppercase}.article__title a:hover{color:var(--heading-font-color)}.article__title a:hover i{opacity:1;transform:translateX(3px)}.article__title a i{opacity:0;transition:0.2s linear}@media only screen and (max-width: 576px){.article__title{margin-bottom:24px;font-size:32px}.article__title a i{display:none}}.article__meta{margin-bottom:24px;font-size:12px;line-height:14px;font-weight:700;letter-spacing:2px;color:var(--heading-font-color)}@media only screen and (max-width: 576px){.article__meta{margin-bottom:20px}}.article__excerpt{margin-bottom:24px}@media only screen and (max-width: 576px){.article__excerpt{margin-bottom:20px}}.article-tags__box{display:flex;align-items:center;flex-wrap:wrap}.article__tag{padding:8px 16px;margin-right:4px;margin-bottom:4px;font-size:11px;line-height:13px;font-weight:500;text-transform:uppercase;border:2px solid var(--border-color);border-radius:30px;color:var(--text-alt-color)}.article__tag:last-child{margin-right:0}.article__tag:hover{color:var(--text-color)}.post,.page{max-width:780px;margin:0 auto;color:var(--text-color)}.post a,.page a{border-bottom:3px solid var(--border-color);transition:all 0.35s}.post a:hover,.page a:hover{color:var(--link-color-hover);border-color:transparent}.post .button,.page .button{border:none;text-decoration:none}.post .button:hover,.page .button:hover{color:var(--button-color)}.post-image,.page-image{position:relative;height:590px;margin-bottom:68px;border-radius:2px;overflow:hidden}.post-image img,.page-image img{position:absolute;top:0;width:100%;height:100%;border-radius:2px;object-fit:cover;user-select:none;background-color:var(--text-color)}@media only screen and (max-width: 1024px){.post-image,.page-image{height:460px;margin-bottom:40px}}@media only screen and (max-width: 768px){.post-image,.page-image{height:360px}}@media only screen and (max-width: 576px){.post-image,.page-image{margin-bottom:32px;height:280px}}.post__info,.page__info{text-align:center;margin-bottom:48px}@media only screen and (max-width: 1024px){.post__info,.page__info{margin-bottom:40px}}@media only screen and (max-width: 576px){.post__info,.page__info{margin-bottom:32px}}.post__title,.page__title{margin-bottom:40px;font-size:72px;line-height:.85em;text-transform:uppercase}@media only screen and (max-width: 1140px){.post__title,.page__title{font-size:64px}}@media only screen and (max-width: 1024px){.post__title,.page__title{font-size:48px}}@media only screen and (max-width: 576px){.post__title,.page__title{margin-bottom:24px;font-size:32px}}.post__meta{font-size:12px;line-height:14px;font-weight:700;letter-spacing:2px;color:var(--heading-font-color)}.post__bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:48px;padding-bottom:48px;border-bottom:1px solid var(--border-color)}@media only screen and (max-width: 576px){.post__bottom{margin-top:40px;padding-bottom:40px}}.post__share .share__list{display:flex;align-items:center;flex-wrap:wrap;width:100%}.post__share .share__item{margin-right:8px;margin-bottom:0;margin:4px 8px 4px 0;text-align:center}.post__share .share__link{display:block;padding:12px 24px;font-size:11px;font-weight:500;text-transform:uppercase;border:none;border-radius:4px;color:var(--background-color) -alt}.post__share .share__link.share__facebook,.post__share .share__link.share__twitter{transition:all 0.35s}.post__share .share__link.share__facebook:hover,.post__share .share__link.share__twitter:hover{color:var(--white)}.post__share .share__link.share__facebook{color:var(--white);background:#3b5998}.post__share .share__link.share__facebook:hover{background:#344e86}.post__share .share__link.share__twitter{color:var(--white);background:#55acee}.post__share .share__link.share__twitter:hover{background:#3ea1ec}.post__tags{display:flex;align-items:center;flex-wrap:wrap}.post__tags .post__tag{padding:12px 24px;margin:4px 8px 4px 0;font-size:11px;line-height:13px;font-weight:500;text-transform:uppercase;border:none;border-radius:4px;color:var(--text-alt-color);background-color:var(--light-gray)}.post__tags .post__tag:last-child{margin-right:0}.post__tags .post__tag:hover{color:var(--dark)}.post-author{display:flex;align-items:center;padding:40px 0;margin-bottom:68px;border-bottom:1px solid var(--border-color)}.post-author .post-author__image{position:relative;display:block;min-width:132px;height:132px;margin-right:20px;border-radius:50%;border:none;overflow:hidden;text-decoration:none}.post-author .post-author__image img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}.post-author .post-author__name{margin-bottom:12px;font-weight:700;font-size:20px;text-transform:uppercase;line-height:1}.post-author .post-author__name:hover a{color:var(--heading-font-color)}.post-author .post-author__name a{border:none}.post-author .post-author__bio{font-size:18px;margin-bottom:0}.post-author .post-author__meta{display:flex;line-height:initial}@media only screen and (max-width: 1024px){.post-author .post-author__bio{font-size:16px}}@media only screen and (max-width: 576px){.post-author{flex-direction:column;align-items:center;text-align:center;margin-bottom:40px}}@media only screen and (max-width: 768px){.post-author{flex-direction:column;text-align:center}.post-author .post-author__image,.post-author .post-author__name{margin-bottom:16px}.post-author .post-author__image{margin-right:0}.post-author .post-author__meta{justify-content:center}}.error{margin-bottom:0;text-align:center}.error .error__title{margin-bottom:24px;font-size:100px;line-height:1}.error .error__text{margin-bottom:48px;color:var(--text-alt-color)}@media only screen and (max-width: 576px){.error .error__title{font-size:68px}.error .error__title{font-size:80px}.error .error__text{margin-bottom:24px}}.tag{padding:96px 0 96px;margin-bottom:96px;border-radius:2px;overflow:hidden;background-size:cover;background-position:center;background-repeat:no-repeat;background-color:var(--text-color)}.tag .tag__inner{display:inline-flex;align-items:center;border-radius:4px;overflow:hidden;background-color:var(--white)}.tag .tag__title{margin:0;padding:16px 32px;font-size:28px;font-weight:900;color:var(--dark-blue);text-transform:uppercase}.tag .tag__counter{display:flex;align-items:center;flex-direction:column;padding:16px 32px;background:var(--white);border-left:1px solid var(--dark-blue);color:var(--dark-blue)}.tag .tag__counter span{font-size:40px;line-height:1;font-weight:900}.tag .tag__counter small{font-size:14px;font-weight:500;text-transform:uppercase}@media only screen and (max-width: 1024px){.tag .tag__inner{display:flex;margin:0 32px}.tag .tag__title{flex-grow:1}}@media only screen and (max-width: 768px){.tag{padding:60px 0;margin-bottom:60px}.tag .tag__title{font-size:28px}}@media only screen and (max-width: 576px){.tag{padding:48px 0;margin-bottom:48px}.tag .tag__inner{margin:0 24px}.tag .tag__title{font-size:20px}.tag .tag__counter{display:none}}
+
+  </style>
+</head>
+
+<body>
+
+    <!-- begin header -->
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="header__inner col col-12">
+
+        <div class="logo">
+          <a class="logo__link" href="/">
+          
+            Privacy Jett
+          
+          </a>
+        </div>
+
+        <nav class="main-nav">
+          <div class="main-nav__box">
+            <div class="nav__icon-close">
+              <i class="ion ion-md-close"></i>
+            </div>
+            <div class="nav__title">Menu</div>
+            <ul class="nav__list list-reset">
+              <li class="nav__item">
+                <a href="/" class="nav__link">Home</a>
+              </li>
+
+            <!--
+              <li class="nav__item">
+                <a href="/tag/guides.html" class="nav__link">Guides</a>
+              </li>
+            -->
+
+              
+
+              
+                
+              
+                
+                  
+                  <li class="nav__item">
+                    <a href="/about/" class="nav__link">About</a>
+                  </li>
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+              
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+
+            </ul>
+          </div>
+        </nav>
+
+        <div class="nav-buttons">
+          <i class="nav__icon nav__icon-menu ion ion-md-menu"></i>
+          <i class="nav__icon nav__icon-search ion ion-md-search"></i>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->
+
+<!-- begin search -->
+<div class="search">
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-8 push-2 col-d-12 push-d-0">
+        <div class="search__box">
+          <div class="search__group">
+            <div class="search__close">
+              <i class="ion ion-md-close"></i>
+            </div>
+            <label for="js-search-input" class="screen-reader-text">Search for Blog</label>
+            <input type="text" id="js-search-input" class="search__text" autocomplete="off" placeholder="Type to search...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-8 push-2 col-d-12 push-d-0">
+        <div class="row search-results-list" id="js-results-container"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- end search -->
+
+    <!-- begin content -->
+    <main class="content" aria-label="Content">
+      
+<div class="container">
+  <div class="row">
+    <div class="col col-12">
+      <div class="post-image">
+        <img src="/images/posts/pexels-torsten-dettlaff-54284.jpg" alt="Mobile privacy tools I use and why">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- begin post -->
+<div class="container animate">
+
+  <div class="post__info">
+    <h1 class="post__title">Mobile privacy tools I use and why</h1>
+    <div class="post__meta">
+      <time class="post__date" datetime="2022-01-03T20:56:35-05:00">03 January 2022</time> – <span class="post__minutes">  19 min read 
+      </span>
+    </div>
+  </div>
+
+  <article class="post">
+
+    <div class="post__content">
+      <p>In this post I’ll cover many of the mobile related software and tools I use on a day to day basis.  While not all specifically <em>privacy</em> oriented, all are mobile.  I’ll give some light background on why I use them, how I use them privately if required, and in some cases discuss how I arrived on my selection with alternatives I tried before.</p>
+
+<p>Generally speaking I try to take the approach of having the least amount of apps installed on my phone as I can.  I try to use browser based solutions as much as possible to limit the attack surface and information leaking to just a browser application and the website it is loading instead of another additional app.</p>
+
+<h1 id="contents">Contents</h1>
+
+<div class="table-container">
+  <table>
+    <tr>
+        <td>
+            <ul>
+                <li><a href="#calyxos">CalyxOS</a></li>
+                <li><a href="#bitwarden">Bitwarden</a></li>
+                <li><a href="#andotp">andOTP</a></li>
+                <li><a href="#simplelogin">SimpleLogin</a></li>
+                <li><a href="#calyx-firewall-app">CalyxOS Firewall App</a></li>
+                <li><a href="#waze">Waze</a></li>
+                <li><a href="#osmand">OsmAnd</a></li>
+                <li><a href="#google-camera">Google Camera</a></li>
+                <li><a href="#google-photos">Google Photos</a></li>
+                <li><a href="#firefox">Firefox</a></li>
+                <li><a href="#firefox-focus">Firefox Focus</a></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li><a href="#brave">Brave</a></li>
+                <li><a href="#jitsi-meet">Jitsi Meet</a></li>
+                <li><a href="#signal">Signal</a></li>
+                <li><a href="#session">Session</a></li>
+                <li><a href="#wire">Wire</a></li>
+                <li><a href="#linphone">Linphone</a></li>
+                <li><a href="#element">Element</a></li>
+                <li><a href="#briar">Briar</a></li>
+                <li><a href="#cake-wallet">Cake Wallet</a></li>
+                <li><a href="#telegram">Telegram</a></li>
+                <li><a href="#google-calculator">Google Calculator</a></li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li><a href="#slack">Slack</a></li>
+                <li><a href="#antennapod">AntennaPod</a></li>
+                <li><a href="#plenary">Plenary</a></li>
+                <li><a href="#newpipe">NewPipe</a></li>
+                <li><a href="#voice">Voice</a></li>
+                <li><a href="#protonmail">ProtonMail</a></li>
+                <li><a href="#privacy">Privacy</a></li>
+                <li><a href="#todoist">Todoist</a></li>
+                <li><a href="#obsidian">Obsidian</a></li>
+            </ul>
+        </td>
+    </tr>
+  </table>
+</div>
+
+<h2 id="calyxos-"><a href="https://calyxos.org/">CalyxOS</a> <a name="calyxos"></a></h2>
+
+<p>I’ve previously used iOS devices extensively, and even in a minimal install and locked down state, even with some of the privacy features available in iOS 15, I can’t get around the feeling that I’m still beholden to Apple and whatever they may be doing in the closed source ecosystem.  I’ve also found that convenience in iOS is like a drug which is easy to get addicted to.  We know that privacy and convenience sit on opposite sides of the scale and I always found that I was giving up more and more privacy for convenience.</p>
+
+<p>When exiting the Apple garden I first moved to GrapheneOS which felt very secure, however the lack of any push notifications was a bit of a deal breaker for my work responsibilities and personal relationships.  There are certain situations were I need to get a notification.  To this end I actually started building some stop gaps using the <a href="https://gotify.net">Gofity</a> server and android app.  Soon however the more I reinvented that wheel the more attractive <a href="https://calyxos.org/">CalyxOS</a> became.  I haven’t looked back after making the switch.  For me it is the right blend of security and privacy while also maintaining usability.</p>
+
+<h2 id="bitwarden-"><a href="https://bitwarden.com/">Bitwarden</a> <a name="bitwarden"></a></h2>
+
+<p>I’ve been a user of password managers for quite some time having been a loyal <a href="https://1password.com">1Password</a> user from the early days of the software.  I believe that the 1Password user experience is still an edge above the rest as well as the interface design.  When I moved to running desktop Linux full time I found that the 1Password client felt sub par, definitely not as polished as on OSX.  In addition I wanted to use open source software wherever possible and Bitwarden seemed like great alternative, which it was.</p>
+
+<h2 id="andotp-"><a href="https://play.google.com/store/apps/details?id=org.shadowice.flocke.andotp&amp;hl=en_US&amp;gl=US">andOTP</a> <a name="andotp"></a></h2>
+
+<p>I’ve tried Authy, Google Authenticator, Ageis and a few other Time-based One-time Password (TOTP) applications.  I originally liked Authy for the ability to sync across multiple devices and also to recover if you lost the device.  Those features also happen to be some insecure points.  The main thing that I dislike about Authy is their attempt to lock people into using their service and attempt to monopolize the TOTP standard.  Authy also doesn’t let you take your data with you, however when I migrated away I found <a href="https://gist.github.com/gboudreau/94bb0c11a6209c82418d01a59d958c93">this great script / tutorial</a> to allow you to get your seeds from each account you have into another app.</p>
+
+<p>I settled on andOTP for its backup capabilities along with the additional security configurations possible in the app.  Requiring an extra password to access the TOTP app once on the device is a nice extra layer of security and piece of mind.</p>
+
+<h2 id="simplelogin-"><a href="https://simplelogin.io/">SimpleLogin</a> <a name="simplelogin"></a></h2>
+
+<p>I’ve used a few other email masking services and found SimpleLogin to be very simple and user friendly.  Additionally all the apps and backend are open source.  The ability to respond from an alias email is pretty nice though rarely used.  On the paid version you can bring your own domain which is a great way to maintain control of the emails and domain for the future.  A really awesome feature on the paid side is that the system auto-creates a new alias on your custom domain the first time you send to an alias that doesn’t already exist.  This makes it super simple for you to provide an alias on the fly at the point of purchase and have the routing “just work”.</p>
+
+<h2 id="calyx-firewall-app-">Calyx Firewall App <a name="calyx-firewall-app"></a></h2>
+
+<p>When installing CalixOS there is an app that comes pre-installed called “Firewall”.  This lets you completely deny an app network access, or set conditions like only allowing the app to connect over VPN, WiFi etc., and it can do this for system utilities and applications too.</p>
+
+<p>There are several situations where I think a particular app has superior performance or capabilities but I don’t trust the author (Google Photos, Camera, Keyboard etc).  With the Firewall app, I can install these apps I don’t trust and lock them down to never get network access and have some piece of mind.</p>
+
+<h2 id="waze-"><a href="https://play.google.com/store/apps/details?id=com.waze&amp;hl=en_US&amp;gl=US">Waze</a> <a name="waze"></a></h2>
+
+<p>Waze is nice in that you can download the app and use with no account required at all.  I don’t let it run in the background, and only allow location access when the app is running.  I also keep location services completely disabled unless I’m using a navigation app as well.  I’d definitely prefer to use an open source option, but the traffic, routing and crowd sourced info (speed traps, objects on road etc) in Waze seem to be unmatched from what I’ve seen.</p>
+
+<h2 id="osmand-"><a href="https://f-droid.org/en/packages/net.osmand.plus/">OsmAnd~</a> <a name="osmand"></a></h2>
+
+<p>I like to have an offline solution for mapping and OsmAnd is a great solution.  I like that you can download maps specific to the geographical areas you’ll be, and more specific maps can be layered together for specific data experiences like topo and hillshades.  OsmAnd can do turn by turn navigation, but I only use it in areas with no network connection to load other maps.</p>
+
+<h2 id="google-camera-"><a href="https://play.google.com/store/apps/details?id=com.google.android.GoogleCamera&amp;hl=en_US&amp;gl=US">Google Camera</a> <a name="google-camera"></a></h2>
+
+<p>Having used the “Camera” app that comes with Graphene and Calyx, along with OpenCamera, I just found that the capabilities and resulting photos from the Google Camera app are superior.  Once I found that I could lock down the app to get zero network access ever (using Calyx Firewall) I now use it of all my photos.</p>
+
+<h2 id="google-photos-"><a href="https://play.google.com/store/apps/details?id=com.google.android.apps.photos&amp;hl=en_US&amp;gl=US">Google Photos</a> <a name="google-photos"></a></h2>
+
+<p>Google Photos is in the same boat as the Google Camera app.  The user experience of interacting with and editing photos is better than other options I’ve found to date, and the ability to lock down the app to not call home or leak data makes me comfortable using it.</p>
+
+<h2 id="browsers">Browsers</h2>
+
+<h3 id="firefox-"><a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox&amp;hl=en_US&amp;gl=US">Firefox</a> <a name="firefox"></a></h3>
+
+<p>I use Firefox as my main browser for non-work content that I want to keep open in a tab or two for some, usually sort, period of time.  Perhaps I’m researching some hardware, comparing reviews etc.</p>
+
+<h3 id="firefox-focus-"><a href="https://play.google.com/store/apps/details?id=org.mozilla.focus&amp;hl=en_US&amp;gl=US">Firefox Focus</a> <a name="firefox-focus"></a></h3>
+
+<p>I use Firefox focus for quick ephemeral searches.  Things where I need to look up the answer to a question, the location of a store etc, and then wipe the browser cache and history.  Firefox Focus is perfect for this.</p>
+
+<h3 id="brave-"><a href="https://play.google.com/store/apps/details?id=com.brave.browser&amp;hl=en_US&amp;gl=US">Brave</a> <a name="brave"></a></h3>
+
+<p>I use Brave as my “work” browser to log into any work related websites and services as my employer is BYOD and I don’t want to keep multiple devices.  I selected Brave since many of the applications we use rely on Google, sometimes requiring Chrome.  Brave gives me the privacy features I want and being based on Chrome often works when an application claims Chrome compatibility.</p>
+
+<h2 id="jitsi-meet-"><a href="https://f-droid.org/en/packages/org.jitsi.meet/">Jitsi Meet</a> <a name="jitsi-meet"></a></h2>
+
+<p>Many of my friends and family are in the iOS ecosystem and it is pretty common for people to want to “facetime” to do a video chat.  Once I broke free to the de-googled world I was now the black sheep who was now being difficult.  Since Jitsi Meet is compatible with most all mobile web browsers it takes just a couple seconds to message someone a link for a video chat without requiring them to download any software first.  I also enjoy the additional security settings I can put in place to lock down the chat, all with no account or KYC requirements.</p>
+
+<h2 id="signal-"><a href="https://www.signal.org/download/">Signal</a> <a name="signal"></a></h2>
+
+<p>I like Signal for it’s ease of use and setup for new users.  It is super easy to ask someone to use Signal and for them to get up and running quickly.  While it is perhaps the key feature that drives smooth setup for new users, I dislike that Signal requires a phone number that can expose your true identity.  I also don’t like that it can’t be used on multiple mobile devices and that you can only be signed into one Signal account at a time.  Today I use Signal for friends and family that are new to privacy and looking for secure messaging with VERY low time investment, or for continuing communications with contacts already on the service.</p>
+
+<h2 id="session-"><a href="https://getsession.org/">Session</a> <a name="session"></a></h2>
+
+<p>I’m very excited about Session, though at the time of this writing, I just use it in a testing / experimental capacity.  I like the fully anonymous identity creation which is a string of auto-generated characters provided by the app.  There is no email or account name requirement which could be matched to your real identity or other accounts, no metadata.  Even a recovery phrase is generated for you instead of setting a password to protect you from a weak password, or reusing an existing one.  I like that the Session server infrastructure is decentralized with no central point for governments to attempt to control.  The UI/UX of the application is also very pleasant and the app can be downloaded independently from an APK rather than an app store if desired (to eliminate sources of potential app corruption if your threat model requires it).</p>
+
+<p>I’ll likely start moving some of my conversations and contacts that require text only over to Session and once it adds voice (currently in beta) and video it could be a viable replacement for my daily driver on secure communications.</p>
+
+<h2 id="wire-"><a href="https://wire.com">Wire</a> <a name="wire"></a></h2>
+
+<p>As of this writing Wire is my daily driver for secure communications.  I’ve listed out the pros and cons below which can provide some insight into my preference, however in the long term as other solutions (like Session) evolve I’ll likely transition away from Wire.</p>
+
+<ul>
+  <li><strong>Pros</strong>
+    <ul>
+      <li>End to end encrypted communications.</li>
+      <li>Supports text chat, voice, and video.</li>
+      <li>Easy setup and use that low-tech users can follow.</li>
+      <li>Nice to have features like Gifs, markup / drawings, voice &amp; video snippets, ping function and location sending</li>
+      <li>Low use of metadata that can link to real identity.  Email can be used for sign-up and can be aliased.</li>
+      <li>One account can be used on many devices at once.</li>
+      <li>Multiple accounts can be signed in on the same app.</li>
+      <li>Mobile and desktop apps for every major OS.</li>
+      <li>Open source and audited code.</li>
+    </ul>
+  </li>
+  <li><strong>Cons</strong>
+    <ul>
+      <li>Centralized server infrastructure.</li>
+      <li>Phone or email required for sign-up.</li>
+      <li>Trust in the company behind Wire is required.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="linphone-"><a href="https://linphone.org/">Linphone</a> <a name="linphone"></a></h2>
+
+<p>For my insecure / legacy voice communications aka having a phone number, I use VOIP.  This allows me to have multiple numbers for different purposes (work, vendors / services, friends &amp; family etc.) all routed to the same endpoint.  I also want the ability to have those numbers ring on multiple devices such as different mobile phones and desktop computers.  Linphone allows meets all these needs and is open source.</p>
+
+<p>I have also tried <a href="https://www.sipnetic.com/">Sipnetic</a> and maintain it as a backup mobile client, however it isn’t available on desktop and I’ve found better call quality and handling on Linphone for long (sometimes multiple hours) phone calls.  Prior to my current configuration I was using <a href="https://mysudo.com/">MySudo</a> which handles a lot of the technical VOIP setup required and also handles SMS, however payments are bound so Google or Apple app stores, voice call quality was routinely bad and all calls would self terminate at the 2 hour mark.</p>
+
+<h2 id="element--matrix-"><a href="https://element.io/get-started">Element</a> / <a href="https://matrix.org">Matrix</a> <a name="element"></a></h2>
+
+<p>I use Element as my Matrix client of choice and try to use Matrix for social communities and discussions.  I like that the software is open source and enjoy the decentralized nature of the server infrastructure.  The “bridges” feature is also nice to connect matrix with other chat tools like Slack, Discord, IRC etc.</p>
+
+<h2 id="briar-"><a href="https://briarproject.org/">Briar</a> <a name="briar"></a></h2>
+
+<p>I currently use Briar in a testing and experimentation capacity but I am very interested in the underlying communications architecture.  I think it sets a standard that other secure communications applications should observe and implement.</p>
+
+<p>First Briar is open source and there are no servers, it uses each device involved in the communications as the storage of conversations which are end to end encrypted.  It is possible to deliver messages over the internet, but in an emergency, or to avoid interception and censorship, messages can be delivered via WiFi and Bluetooth.  When sending over the internet, Briar uses Tor to prevent eavesdroppers from learning which users are talking to each other.  Outside of direct messaging it also supports group communication through forums and blog posts, again following the model of storing the information on each device.</p>
+
+<blockquote>
+  <p>Briar is a messaging app designed for activists, journalists, and anyone else who needs a safe, easy and robust way to communicate.</p>
+
+  <p><cite><a href="https://briarproject.org/how-it-works/">Briar: How it works</a></cite></p>
+</blockquote>
+
+<p>As seen in their documentation Briar is intended for people who need to communicate in an environment where other forces are actively attempting to stop or censor that communication as well as to identify the parties involved.  Often the parties communicating can’t or shouldn’t know each other’s true identities and their conversation medium shouldn’t leak any identifiable information.</p>
+
+<p>I’m looking forward to continuing to evaluate Briar and fully test out it’s features and find applications where I can use it.</p>
+
+<h2 id="cake-wallet-"><a href="https://cakewallet.com/">Cake Wallet</a> <a name="cake-wallet"></a></h2>
+
+<p>For Crypto I mostly deal in Bitcoin (BTC) and Monero (XMR).  In terms of holding value, and possible investment I use BTC as the place where I store crypto.  When it comes time to spend those coins ideally I’ll transfer what I need to XMR and then spend.</p>
+
+<p>I really like Monero’s built in privacy as opposed to Bitcoin’s public operations.   Cake Wallet makes it super easy to create new BTC and XMR wallets and to transfer between them to follow my “hold / spend” strategy above.  Since Cake Wallet isn’t an exchange there is no KYC or other identifiable information making your crypto like cash as it should be.</p>
+
+<h2 id="telegram-"><a href="https://telegram.org/">Telegram</a> <a name="telegram"></a></h2>
+
+<p>I use telegram mostly as a social media tool to follow and communicate with others over topics that are sometimes censored on Big Tech outlets.  I don’t like that Telegram is not encrypted by default, it is bound to a phone number, relies on a central server etc.  For all these reasons I don’t use it as secure messaging at all and treat it as something that could go away at any time and not mave much impact.</p>
+
+<h2 id="google-calculator-"><a href="https://play.google.com/store/apps/details?id=com.google.android.calculator&amp;hl=en_US&amp;gl=US">Google Calculator</a> <a name="google-calculator"></a></h2>
+
+<p>The Calyx / Graphene included calculator isn’t great and many open source options are similar.  Google’s calculator app is a much better user experience and with the ability to lock it down using the Calyx Firewall</p>
+
+<h2 id="slack-"><a href="https://slack.com">Slack</a> <a name="slack"></a></h2>
+
+<p>Slack is installed only because I need real time messaging abilities for my day job, I don’t use it for any other personal or social communities etc and would look for other more privacy oriented options for group messaging if I had a need.  That said on CalyxOS the application works well, notifications come in as expected and so on.</p>
+
+<h2 id="antennapod-"><a href="https://f-droid.org/en/packages/de.danoeh.antennapod/">AntennaPod</a> <a name="antennapod"></a></h2>
+
+<p>AntennaPod is a great open source podcasting app.  It allows you to search most major podcast syndication outlets and has standard features you’d expect like speed control, skip ahead and back, listening queue etc.  The app experience is on par with any other podcasting app I’ve used before but has the piece of mind of not requiring an account or sending off your listening interests to a 3rd party.</p>
+
+<h2 id="plenary-"><a href="https://play.google.com/store/apps/details?id=com.spians.plenary&amp;hl=en_US&amp;gl=US">Plenary</a> <a name="plenary"></a></h2>
+
+<p>Plenary is my mobile RSS reader of choice.  It is full featured allowing subscription to RSS feeds, categorization of those and easy reading, saving for later etc.</p>
+
+<h2 id="newpipe-"><a href="https://f-droid.org/en/packages/org.schabi.newpipe/">NewPipe</a> <a name="newpipe"></a></h2>
+
+<p>I try not to patronize Big Tech especially ones that engage in open censorship like Youtube, but the reality is that there is a lot of content only available there.  To opt out of the tracking I use NewPipe.  It has a great interface, supports watch lists to save things for later and can also get around “sign in for age verification” with a simple setting.</p>
+
+<h2 id="voice-"><a href="https://f-droid.org/en/packages/de.ph1b.audiobook/">Voice</a> <a name="voice"></a></h2>
+
+<p>I do use Audible.com for audio books so I’m knowingly giving my purchase history to Amazon.  To thwart this the best I can I use an anonymous Amazon account and download the audio books for listening offline via the Voice app.  In order to play Audible content in Voice the DRM has to be removed first using FFMPEG.  <a href="/software/how-to-play-audible-audiobooks-in-foss-players">I’ve written up a separate post on that process</a>.</p>
+
+<p>The Voice app is open source and has great features you’d expect from any first class audio book listening application.</p>
+
+<h2 id="protonmail-"><a href="https://play.google.com/store/apps/details?id=ch.protonmail.android&amp;hl=en&amp;gl=US">ProtonMail</a> <a name="protonmail"></a></h2>
+
+<p>For email I use ProtonMail and I use their native mobile app.  I could definitely just use the web application since I don’t want email notifications, however the native app experience is much better and since their app is open source I don’t worry about having it installed.  Especially since Protonmail’s platform has built in support for PGP using other mail clients on mobile just feel more cumbersome.</p>
+
+<h2 id="privacycom-"><a href="https://privacy.com">Privacy.com</a> <a name="privacy"></a></h2>
+
+<p>While I don’t use a native app for managing Privacy.com, I do use the service quite frequently and have a saved shortcut to their web app (which is a PWA for great mobile experience) saved to my mobile desktop.  Anytime I provide online payment information I always try to use a locked down Privacy.com card and anonymous account identity information.  One of the great benefits of Privacy cards in addition to the one time use, or charge restrictions, is the ability to use any billing name and address.  This allows for providing disinformation to whatever service is charging the card, enhancing your own privacy.</p>
+
+<h2 id="todoist-"><a href="https://todoist.com">Todoist</a> <a name="todoist"></a></h2>
+
+<p>Todoist is an app that I DO use daily, both on mobile, desktop (Linux) and web, the features and user experience are first class and I love it, however I AM constantly looking for a replacement because I’d much prefer to use an open source option that is more privacy focused.</p>
+
+<p>To this end I take a few precautions when using Todoist:</p>
+
+<ul>
+  <li>Use an alias email account when signing up</li>
+  <li>Do not ever use any location based features</li>
+  <li>Be mindful of how the todo content could be used to reveal your true identity</li>
+</ul>
+
+<h2 id="obsidian-"><a href="https://obsidian.md">Obsidian</a> <a name="obsidian"></a></h2>
+
+<p>Obsidian is my #1 choice for note taking and note storage.  I have used quite a few note taking apps, namely Bear for Apple OSs and Standard Notes.  In terms of criteria ideally I want them to be open source, they need a desktop and mobile client that sync together and robust tagging or categorization features.</p>
+
+<p>For quite some time I used Standard Notes and love that it is open source with good encryption support.  However attachments, tagging and the editing experience were sub par, even with the paid account for extensions I just couldn’t get it to a place that felt great.</p>
+
+<p>Though not open source presently, Obsidian meets all these criteria and then some.  The real power comes from the official and community plugins that can add incredible functionality to the app allowing for endless customization.  Additionally there is no account sign-up required at all to make full use of the application on any single platform.  If you need to sync between platforms there is a small monthly fee which can easily be paid anonymously via an alias email and privacy.com card.</p>
+
+<hr />
+
+<p>Phew, that was a long list.  Hopefully my experiences can provide some benefit for helping you make decisions about what applications you are interested in using ane exploring.  Feel free to <a href="/about/#contact-me">drop me a line</a> and discuss your experiences or other apps you use.</p>
+
+    </div>
+
+    <div class="post__bottom">
+
+      <div class="post__share">
+        <ul class="share__list list-reset">
+          <li class="share__item">
+            <a class="share__link share__twitter" href="https://twitter.com/intent/tweet?text=Mobile%20privacy%20tools%20I%20use%20and%20why&url=https://privacyjett.com/privacy/mobile-privacy-tools-i-use-and-why"
+              onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+              title="Share on Twitter" rel="nofollow">Twitter</a>
+          </li>
+        </ul>
+      </div>
+
+      
+      <div class="post__tags">
+        
+        <a href="/tag/privacy" class="post__tag">privacy</a>
+        
+        <a href="/tag/tools" class="post__tag">tools</a>
+        
+        <a href="/tag/mobile" class="post__tag">mobile</a>
+        
+      </div>
+      
+    </div>
+
+
+
+    
+
+  </article>
+</div>
+<!-- end post -->
+    </main>
+    <!-- end content -->
+
+    <div class="top" title="Top"><i class="ion ion-ios-arrow-round-up"></i></div>
+
+    <!-- begin footer -->
+<footer class="footer">
+
+  <div class="footer__inner">
+    <div class="container">
+      <div class="row">
+        <div class="col col-4 col-d-6 col-t-12">
+  <div class="widget widget-info">
+    <div class="widget__head">
+      <div class="footer-logo">
+        <div class="footer-logo__link">
+          
+            Privacy Jett
+          
+        </div>
+      </div>
+    </div>
+    <p class="footer-text">I'm a software developer passionate about privacy and security.  I enjoy teaching and learning these topics to help others better control their digital life, to break free from Surveillance capitalism.</p>
+    
+  <div class="social">
+    <ul class="social__list list-reset">
+      
+      <li class="social__item">
+        <a class="social__link" href="https://twitter.com/privacyjett" target="_blank" rel="noopener" aria-label="Twitter link"><i class="ion ion-logo-twitter"></i></a>
+      </li>
+      
+      <li class="social__item">
+        <a class="social__link" href="https://github.com/privacyjett" target="_blank" rel="noopener" aria-label="Github link"><i class="ion ion-logo-github"></i></a>
+      </li>
+      
+    </ul>
+  </div>
+
+  </div>
+</div>
+        
+        <div class="col col-4 col-d-6 col-t-12">
+  <div class="widget widget-tags">
+    <div class="widget__head">
+      <h3 class="widget__title">Explore tags</h3>
+    </div>
+    <div class="tag__cloud">
+      <a href="/tag/cash.html" class="set-1">cash</a> <a href="/tag/how-to.html" class="set-3">how-to</a> <a href="/tag/intro.html" class="set-1">intro</a> <a href="/tag/mobile.html" class="set-5">mobile</a> <a href="/tag/payments.html" class="set-1">payments</a> <a href="/tag/privacy.html" class="set-5">privacy</a> <a href="/tag/security.html" class="set-1">security</a> <a href="/tag/tools.html" class="set-5">tools</a>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="footer__info">
+          <div class="copyright">2022 &copy; <a href="/">Privacy Jett</a>.</div>
+          <div class="toggle-theme">
+            <div class="toggle-moon"><i class="ion ion-ios-moon"></i></div>
+            <div class="toggle-sun"><i class="ion ion-ios-sunny"></i></div>
+            <div class="toggle-thumb"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- end footer -->
+
+  <script src="/js/vendors/jquery-3.5.1.min.js"></script>
+  <script src="/js/scripts.js"></script>
+</body>
+
+</html>
